@@ -21,7 +21,6 @@ body {
 
 .main {
     background-color: #fff;
-    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
@@ -31,7 +30,6 @@ body {
 
 .sidebar {
     background-color: #0ea5e9;
-    min-height: 100vh;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -83,8 +81,8 @@ a:hover {
 .header {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0 2rem;
     z-index: 1;
-    padding: .5rem 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -178,9 +176,9 @@ a:hover {
 }
 
 .bottom-nav .buttons {
-    margin: 3rem;
+    margin: 2rem;
     display: flex;
-    gap: 0 3rem;
+    gap: 0 1rem;
 }
 
 button {
@@ -210,7 +208,7 @@ button:hover {
 }
 
 .projects {
-    padding: 2rem;
+    padding: 4rem 2rem;
 }
 
 .projects h1 {
@@ -271,13 +269,17 @@ button:hover {
 .news {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 4rem 2rem;
     gap: 3rem;
 }
 
 .announcements h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+.announcements p {
+    font-size: 1.1rem;
 }
 
 .info-container {
@@ -350,4 +352,69 @@ button:hover {
 .user .name p {
     font-size: 1.5rem;
     color: #78716c;
+}
+
+/*media queries*/
+
+@media(max-width: 1150px) {
+    .grid {
+        grid-template-columns: 10vw 90vw;
+    }
+    .sidebar {
+        align-items: center;
+    }
+    .sidebar .logo h1,
+    .menu-icons a {
+        display: none;
+    }
+    .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bottom-nav .profile .text p{
+        display: none;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .news {
+        padding: 0 2rem 4rem 2rem;
+    }
+    .user-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    .sidebar {
+        padding: 2rem 0;
+    }
+    .notification-area p{
+        display: none;
+    }
+    .top-nav .search-bar {
+        width: 100%;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile .text {
+        text-align: center;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
 }
