@@ -354,6 +354,27 @@ button:hover {
     color: #78716c;
 }
 
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+footer a {
+    font-size: 2rem;
+    color: black;
+}
+
 /*media queries*/
 
 @media(max-width: 1150px) {
